@@ -27,22 +27,36 @@ const int MAX = 10;
 const int MIN= 1;
 int MAGIQUE = rand.Next(MIN, MAX+1);
 int nombreAffiche = MAGIQUE+1;
-int nbVies = 5;
 
-while (nombreAffiche != MAGIQUE)
+for (int nbVies=4 ;nbVies > 0; nbVies--)
 {
+    Console.WriteLine("il vous reste " + nbVies + " vies.");
     nombreAffiche = demanderNombre(MIN, MAX);
    if (nombreAffiche > MAGIQUE)
     {
         Console.WriteLine("le nombre est plus petit");
+
     }
     else if (nombreAffiche < MAGIQUE)
     {
         Console.WriteLine("le nombre est plus grand");
+        
     }
+    else
+    {
+        break;
+    }
+   
 }
 
-Console.WriteLine("Bravo");
+if (nombreAffiche == MAGIQUE)
+{
+    Console.WriteLine("Bravo");
+}
+else
+{
+    Console.WriteLine("vous avez perdu le nombre magique était " + MAGIQUE);
+}
 
 //Random rand = new Random();
 //int result = rand.Next(1, 10);
