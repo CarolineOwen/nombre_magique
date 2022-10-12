@@ -27,6 +27,7 @@ const int MAX = 10;
 const int MIN= 1;
 int MAGIQUE = rand.Next(MIN, MAX+1);
 int nombreAffiche = MAGIQUE+1;
+int nbVies = 4;
 
 while (nombreAffiche != MAGIQUE)
 {
